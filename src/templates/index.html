@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Upload Certificate</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Poppins"
+    />
+    <style>
+      body {
+        font-family: "Poppins", Arial, sans-serif;
+        background-color: #e0e6f1; /* Light blue background color */
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+      }
+
+      .container {
+        text-align: center;
+        background-color: #fff;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        border-radius: 5px;
+        overflow: hidden;
+        max-width: 400px;
+        padding: 20px;
+      }
+
+      h1 {
+        margin: 10px 0;
+        color: #333;
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      input[type="file"] {
+        display: none;
+      }
+
+      .file-input-label {
+        background-color: #3498db; /* Light blue button color */
+        color: white;
+        border: none;
+        padding: 10px 0;
+        text-align: center;
+        text-decoration: none;
+        display: block;
+        font-size: 16px;
+        margin: 10px 0;
+        cursor: pointer;
+        border-radius: 5px;
+        width: 100%; /* Full width button */
+      }
+
+      input[type="file"] + .file-input-label {
+        background-color: #3498db; /* Light blue button color */
+        color: white;
+        cursor: pointer;
+      }
+
+      .file-input-label:hover {
+        background-color: #2980b9; /* Slightly darker blue on hover */
+      }
+
+      input[type="submit"] {
+        background-color: #3498db; /* Light blue button color */
+        color: white;
+        border: none;
+        padding: 10px 0;
+        text-align: center;
+        text-decoration: none;
+        display: block;
+        font-size: 16px;
+        margin: 10px 0;
+        cursor: pointer;
+        border-radius: 5px;
+        width: 100%; /* Full width button */
+      }
+
+      input[type="submit"]:hover {
+        background-color: #2980b9; /* Slightly darker blue on hover */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Upload Certificate</h1>
+      <form method="post" enctype="multipart/form-data">
+        <input
+          type="file"
+          name="file"
+          accept=".png, .jpg, .jpeg, .gif"
+          id="certificate-file"
+        />
+        <label for="certificate-file" class="file-input-label"
+          >Select Certificate</label
+        >
+        <input type="submit" value="Upload" />
+      </form>
+    </div>
+  </body>
+</html>
